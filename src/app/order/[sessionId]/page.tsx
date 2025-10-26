@@ -1,7 +1,6 @@
 'use client';
 
 import { use, useEffect, useState } from 'react';
-import { notFound } from 'next/navigation';
 import { Container, Button, Card, CardContent, Badge, Separator } from '@/components/atoms';
 import { Icon } from '@/components/atoms/Icon';
 import Link from 'next/link';
@@ -84,7 +83,7 @@ export default function OrderSuccessPage({ params }: OrderPageProps) {
               <Icon name="x" className="text-red-600" size={32} />
             </div>
             <h1 className="text-2xl font-bold text-gray-900 mb-2">Order Not Found</h1>
-            <p className="text-gray-600 mb-6">We couldn't find this order. Please check your email for order details.</p>
+            <p className="text-gray-600 mb-6">We couldn&apos;t find this order. Please check your email for order details.</p>
             <Link href="/">
               <Button>Return to Home</Button>
             </Link>
@@ -214,7 +213,7 @@ export default function OrderSuccessPage({ params }: OrderPageProps) {
             <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8 rounded">
               <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
                 <Icon name="check-circle" className="text-blue-600" size={20} />
-                What's Next?
+                What&apos;s Next?
               </h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start gap-2">
@@ -227,7 +226,7 @@ export default function OrderSuccessPage({ params }: OrderPageProps) {
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="check" className="text-green-600 shrink-0 mt-0.5" size={16} />
-                  <span>You'll receive a shipping confirmation with tracking number</span>
+                  <span>You&apos;ll receive a shipping confirmation with tracking number</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="shield-check" className="text-green-600 shrink-0 mt-0.5" size={16} />

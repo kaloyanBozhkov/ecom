@@ -1,6 +1,6 @@
 import { type NextApiRequest, type NextApiResponse } from "next";
-import { retrieveSession } from "./helpers/retrieveSession";
-import { isValidSessionId } from "./helpers/isValidSessionId";
+import { retrieveSession } from "@/server/helpers/stripe/retrieveSession";
+import { isValidSessionId } from "@/server/helpers/stripe/isValidSessionId";
 
 
 export default async function handler(

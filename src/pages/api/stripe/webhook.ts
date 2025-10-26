@@ -37,7 +37,6 @@ export type CustomerDetails = {
   tax_ids: unknown[]; // You might want to define a more specific type for tax_ids if needed
 };
 
-// eslint-disable-next-line
 const cors = Cors({
     allowMethods: ["POST", "HEAD"],
   }),
@@ -48,7 +47,6 @@ const cors = Cors({
       let event: Stripe.Event;
 
       try {
-        // eslint-disable-next-line
         buf = await buffer(req);
         event = stripeCli.webhooks.constructEvent(buf, sig, webhookSecret);
       } catch (err) {
@@ -84,7 +82,7 @@ const cors = Cors({
           }>;
 
           // Create order in database
-          const order = await createOrder({
+          await createOrder({
             checkoutSessionId,
             customerEmail: customerDetails.email,
             customerName: customerDetails.name,
@@ -131,7 +129,6 @@ const cors = Cors({
         }
         case "payment_intent.payment_failed": {
           const paymentIntent = event.data.object;
-          // eslint-disable-next-line
           console.log(
             `❌ Payment failed: ${paymentIntent?.last_payment_error?.message}`,
           );
@@ -154,6 +151,5 @@ const cors = Cors({
     }
   };
 
-// eslint-disable-next-line
 export default cors(webhookHandler as RequestHandler);
 

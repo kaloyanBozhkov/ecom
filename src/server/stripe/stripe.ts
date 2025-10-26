@@ -2,6 +2,6 @@ import Stripe from "stripe";
 import { env } from "@/env";
 
 export const stripeCli = new Stripe(env.STRIPE_SECRET_KEY, {
-  apiVersion: "2024-10-28.acacia",
+  apiVersion: "2025-09-30.clover",
 });
 
