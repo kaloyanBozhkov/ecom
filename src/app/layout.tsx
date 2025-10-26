@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/molecules";
 import { Footer, CartDrawer } from "@/components/organisms";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,8 @@ export default function RootLayout({
         </main>
         <Footer />
         <CartDrawer />
-      </body>
+      </body> 
+      <Analytics />
     </html>
   );
 }
